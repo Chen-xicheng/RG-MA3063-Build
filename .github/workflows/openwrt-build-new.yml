@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/REITZG1/openwrt-ruijie-rg-ma3063
+  REPO_URL: https://github.com/Chen-xicheng/openwrt-ruijie-rg-ma3063
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
