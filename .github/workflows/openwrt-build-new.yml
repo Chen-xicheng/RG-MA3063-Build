@@ -57,6 +57,10 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
+    - name: Set executable for uci-defaults
+      run: |
+        chmod +x openwrt/target/linux/qualcommax/ipq50xx/base-files/etc/uci-defaults/99-ma3063-disable-wifi 
+
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
